@@ -21,8 +21,21 @@ $("#catList > li > a").click(function() {
 			cat.clicks += 1;
 			var catImgSrc = cat.src;
 			$("img#selectedCat").attr("src","img/"+catImgSrc);
+			$("img#selectedCat").data("catid",cat.id);
 			$("#clkPicName").html(cat.name);
 			$("#clkCount").html(cat.clicks);
 		}
 	}
-});
+})
+
+// Can refector some here
+$("img#selectedCat").click(function() {
+	var catid = $(this).data("catid");
+	for (var i = 0; i<catMap.length;i++){
+		var cat = catMap[i];
+		if (cat.id == catid) {
+			cat.clicks +=1;
+			$("#clkCount").html(cat.clicks);
+		}
+	}
+})
