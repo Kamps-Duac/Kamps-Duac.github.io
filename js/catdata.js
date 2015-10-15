@@ -23,8 +23,10 @@ var data = {
 // Controller
 var controller = {
 	init: function() {
-		catListView.init();
+		controller.setCurrentCat(data.cats[0]);
+
 		catImgView.init();
+		catListView.init();
 	},
 
 	getCurrentCat: function() {
@@ -57,6 +59,12 @@ var catImgView = {
 		this.catImageElem.click(function() {
 			controller.addOneClick();
 		});
+		this.catImageElem.mousedown(function() {
+			$(this).css("opacity", 0.5);
+		});
+		this.catImageElem.mouseup(function() {
+			$(this).css("opacity", 1);
+		});
 
 		// Render the view on load
 		this.render();
@@ -70,6 +78,7 @@ var catImgView = {
 			this.catNameElem.text(currentCat.name);
 			this.catImageElem.attr("src",currentCat.catImgSrc);
 			$("#clickCountDisplay").show();
+			$("#catList>li").removeClass("active");
 		}
 		
 	}
@@ -78,34 +87,54 @@ var catImgView = {
 var catListView = {
 	init: function() {
 		this.catListElem = $("#catList");
-		this.currentCat = data.cats[1];
+		//this.currentCat = data.cats[1];
 		this.render();
 	},
 
 	render: function() {
-		var cat, elem, i;
+		var cat, liElem, aElem, i;
 
 		var cats = controller.getCats();
 
-		this.catListElem.innerHTML = '';
+		function generateCatClickHandler(catCopy) {
+			return function() {
+				controller.setCurrentCat(catCopy);
+				catImgView.render();
+				catListView.catListElem
+					.children().children().removeClass("btn-success");
+				$(this).addClass("btn-success");
+			};
+		}
 
 		for (i = 0; i < cats.length; i++) {
 			cat = cats[i];
 
-			elem = document.createElement('li');
-			$(elem).addClass("btn btn-priamary btn-xs active");
-			elem.textContent = cat.name;
+			// Here create nested element <li><a></a></li>
+			liElem = document.createElement('li');
+			aElem = document.createElement('a');
+			$(aElem).addClass("btn btn-primary btn-sm");
+			aElem.textContent = cat.name;
 
-			elem.addEventListener('click', (function(catCopy) {
-				return function() {
-					controller.setCurrentCat(catCopy);
-					catImgView.render();
-				};
-			})(cat));
-
-			this.catListElem.append(elem);
+			aElem.addEventListener('click', (generateCatClickHandler(cat)));
+			liElem.appendChild(aElem);
+			this.catListElem.append(liElem);
 		}
 	}
+};
+
+var catAdminView = {
+	init: function() {
+		this.catAdminBtn = $("#catAdminBtn");
+		this.catNameFld = $("#catNameFld");
+		this.catImgUrlFld = $("catImgUrlFld");
+		this.catClickCounterFld = $("catClickCounterFld");
+
+		this.catAdminBtn.click(function() {
+			$("form").toggle();
+		});
+
+		this.render();
+	},
 };
 
 controller.init();
@@ -149,3 +178,15 @@ controller.init();
 // 		}
 // 	}
 // })
+
+function generateCatClickHandler(catCopy) {
+	return function() {
+		controller.setCurrentCat(catCopy);
+		catImgView.render();
+	};
+}
+
+for (i = 0; i < cats.length; i++) {
+	cat = cats[i];
+	elem.addEventListener('click', (generateCatClickHandler(cat)));
+}
