@@ -46,6 +46,12 @@ var controller = {
 		data.currentCat.clicks++;
 	},
 
+	saveAdminForm: function(name, url, clicks) {
+		data.currentCat.name = name;
+		data.currentCat.catImgSrc = url;
+		data.currentCat.clicks = clicks;
+	},
+
 	refreshViews: function() {
 		catImgView.render();
 		catAdminView.render();
@@ -85,6 +91,7 @@ var catImgView = {
 			this.catImageElem.attr("src",currentCat.catImgSrc);
 			$("#clickCountDisplay").show();
 			$("#catList>li").removeClass("active");
+			$("#clkPicName").text(currentCat.name);
 		}
 		
 	}
@@ -136,9 +143,25 @@ var catAdminView = {
 		this.catNameFld = $("#catNameFld");
 		this.catImgUrlFld = $("#catImgUrlFld");
 		this.catClickCounterFld = $("#catClickCounterFld");
+		this.cancelAdmin = $("#cancelAdminForm");
+		this.saveAdmin = $("#saveAdminForm");
 
 		this.catAdminBtn.click(function() {
 			$("#adminForm").toggle();
+		});
+		this.cancelAdmin.click(function() {
+			$("#adminForm").toggle();
+			catAdminView.render();
+		});
+		this.saveAdmin.click(function() {
+			$("#adminForm").toggle();
+			controller.saveAdminForm(
+				catAdminView.catNameFld.val(),
+				catAdminView.catImgUrlFld.val(),
+				catAdminView.catClickCounterFld.val()
+				);
+			controller.refreshViews();
+
 		});
 
 		this.render();
