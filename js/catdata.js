@@ -27,6 +27,7 @@ var controller = {
 
 		catImgView.init();
 		catListView.init();
+		catAdminView.init();
 	},
 
 	getCurrentCat: function() {
@@ -43,7 +44,11 @@ var controller = {
 
 	addOneClick: function() {
 		data.currentCat.clicks++;
+	},
+
+	refreshViews: function() {
 		catImgView.render();
+		catAdminView.render();
 	}
 };
 
@@ -58,6 +63,7 @@ var catImgView = {
 		// Add click event for Cat Picture
 		this.catImageElem.click(function() {
 			controller.addOneClick();
+			controller.refreshViews();
 		});
 		this.catImageElem.mousedown(function() {
 			$(this).css("opacity", 0.5);
@@ -103,6 +109,8 @@ var catListView = {
 				catListView.catListElem
 					.children().children().removeClass("btn-success");
 				$(this).addClass("btn-success");
+
+				controller.refreshViews();
 			};
 		}
 
@@ -126,15 +134,23 @@ var catAdminView = {
 	init: function() {
 		this.catAdminBtn = $("#catAdminBtn");
 		this.catNameFld = $("#catNameFld");
-		this.catImgUrlFld = $("catImgUrlFld");
-		this.catClickCounterFld = $("catClickCounterFld");
+		this.catImgUrlFld = $("#catImgUrlFld");
+		this.catClickCounterFld = $("#catClickCounterFld");
 
 		this.catAdminBtn.click(function() {
-			$("form").toggle();
+			$("#adminForm").toggle();
 		});
 
 		this.render();
 	},
+
+	render: function() {
+		var currentCat = controller.getCurrentCat();
+
+		this.catNameFld.val(currentCat.name);
+		this.catImgUrlFld.val(currentCat.catImgSrc);
+		this.catClickCounterFld.val(currentCat.clicks);
+	}
 };
 
 controller.init();
@@ -186,7 +202,7 @@ function generateCatClickHandler(catCopy) {
 	};
 }
 
-for (i = 0; i < cats.length; i++) {
-	cat = cats[i];
-	elem.addEventListener('click', (generateCatClickHandler(cat)));
-}
+// for (i = 0; i < cats.length; i++) {
+// 	cat = cats[i];
+// 	elem.addEventListener('click', (generateCatClickHandler(cat)));
+// }
