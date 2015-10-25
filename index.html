@@ -60,56 +60,65 @@
             <h2>Click a Cat</h2>
           <!-- This unordered list is dynamically 
           populated by catdata.js -->
-          <ul id="catList"></ul>
+          <ul id="catList" data-bind="foreach: catList">
+            <li data-bind="text: name, click: $parent.setCurrentCat"></li>
+          </ul>
         </div>
         <div class="col-md-8">
           <h2>Cat Clicked</h2>
-          <h5 id="clickCountDisplay" hidden>
-            <span id="clkPicName"></span> clicks: <span id="clkCount" data-bind="text: clkCount"></span>
+          <h5 id="clickCountDisplay">
+            <span id="clkPicName"
+            data-bind="text: currentCat().name"
+            ></span> 
+            clicks: 
+            <span id="clkCount" 
+            data-bind="text: currentCat().clickCount"
+            ></span>
           </h5>
-          <img  id="selectedCat"
-          data-catid=""
-          class="img-responsive"
-          src=""
-          alt="Click a Cat!"
-          style="max-height:300px"
-          >
+          <h6>Level: <span data-bind="text: currentCat().level"></span></h2>
+            <img  
+            id="selectedCat"
+            data-bind="attr: { src: currentCat().imgSrc }, click: incrementCounter"
+            class="img-responsive"
+            alt="Click a Cat!"
+            style="max-height:300px"
+            >
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div id="#adminContainer" class="col-md-4">
-          <a id="catAdminBtn" class="btn btn-warning btn-md" role="button" style="margin-bottom: 1em;">Admin</a>
-          <!-- TODO: finish form -->
-          <form id="adminForm" style="display: none">
-            <div class="form-group">
-              <label for="catNameFld">Cat Name</label>
-              <input type="text" class="form-control" id="catNameFld" placeholder="Cat Name" />
-            </div>
-            <div class="form-group">
-              <label for="catImgUrlFld">Cat Image URL</label>
-              <input type="url" class="form-control" id="catImgUrlFld" placeholder="Cat Image Source" />
-            </div>
-            <div class="form-group">
-              <label for="catClickCounterFld">Cat Clicks</label>
-              <input type="number" class="form-control" id="catClickCounterFld" placeholder="Cat Click Count" />
-            </div>
-          </form>
+        <div class="row">
+          <div id="#adminContainer" class="col-md-4">
+            <a id="catAdminBtn" class="btn btn-warning btn-md" role="button" style="margin-bottom: 1em;">Admin</a>
+            <!-- TODO: finish form -->
+            <form id="adminForm" style="display: none">
+              <div class="form-group">
+                <label for="catNameFld">Cat Name</label>
+                <input type="text" class="form-control" id="catNameFld" placeholder="Cat Name" />
+              </div>
+              <div class="form-group">
+                <label for="catImgUrlFld">Cat Image URL</label>
+                <input type="url" class="form-control" id="catImgUrlFld" placeholder="Cat Image Source" />
+              </div>
+              <div class="form-group">
+                <label for="catClickCounterFld">Cat Clicks</label>
+                <input type="number" class="form-control" id="catClickCounterFld" placeholder="Cat Click Count" />
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <hr>
+        <hr>
 
-      <footer>
-        <p>&copy; FreeAsInGuac 2015</p>
-      </footer>
-    </div> <!-- /container -->        
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+        <footer>
+          <p>&copy; FreeAsInGuac 2015</p>
+        </footer>
+      </div> <!-- /container -->        
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/knockout-3.3.0.js"></script>
+      <script src="js/vendor/bootstrap.min.js"></script>
+      <script src="js/vendor/knockout-3.3.0.js"></script>
 
-    <script src="js/main.js"></script>
-    <script src="js/catdata.js"></script>
-  </body>
-  </html>
+      <script src="js/main.js"></script>
+      <script src="js/catdata.js"></script>
+    </body>
+    </html>
