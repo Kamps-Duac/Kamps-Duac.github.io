@@ -105,7 +105,7 @@ var catListView = {
 	},
 
 	render: function() {
-		var cat, liElem, aElem, i;
+		var cat, btnElem, i;
 
 		var cats = controller.getCats();
 
@@ -114,7 +114,7 @@ var catListView = {
 				controller.setCurrentCat(catCopy);
 				catImgView.render();
 				catListView.catListElem
-					.children().children().removeClass("btn-success");
+					.children().removeClass("btn-success");
 				$(this).addClass("btn-success");
 
 				controller.refreshViews();
@@ -124,15 +124,14 @@ var catListView = {
 		for (i = 0; i < cats.length; i++) {
 			cat = cats[i];
 
-			// Here create nested element <li><a></a></li>
-			liElem = document.createElement('li');
-			aElem = document.createElement('a');
-			$(aElem).addClass("btn btn-primary btn-sm");
-			aElem.textContent = cat.name;
+			// Here create button element for .btn-group
+			btnElem = document.createElement('button');
+			$(btnElem).addClass("btn btn-primary btn-sm");
+			$(btnElem).attr('type', 'button');
+			btnElem.textContent = cat.name;
 
-			aElem.addEventListener('click', (generateCatClickHandler(cat)));
-			liElem.appendChild(aElem);
-			this.catListElem.append(liElem);
+			btnElem.addEventListener('click', (generateCatClickHandler(cat)));
+			this.catListElem.append(btnElem);
 		}
 	}
 };
