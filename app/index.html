@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Scott Kamps-Duac</title>
-  <meta name="description" content="">
+  <meta name="description" content="Personal page for Scott Kamps-Duac">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
@@ -21,7 +21,7 @@
 <body>
   <div class="container-fluid">
     <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -42,7 +42,7 @@
               <a target="_blank" href="https://github.com/kamps-duac"><img src="img/GitHub-Mark-64px.png" alt="" height="20px" />Github</a>
             </li>
             <li>
-              <a href="https://twitter.com/kampsduac"> <img src="img/TwitterLogo_55acee.png" alt="Twitter " height="20px" />@kampsduac</a>
+              <a target="_blank" href="https://twitter.com/kampsduac"> <img src="img/TwitterLogo_55acee.png" alt="Twitter " height="20px" />@kampsduac</a>
             </li>
           </ul>
         </div>
@@ -52,13 +52,14 @@
     <div class="jumbotron">
       <div class="container">
         <h1><span><img src="http://www.gravatar.com/avatar/201af2cc5f5528097030ce03e5eda837" /></span> Scott's Stuff</h1>
+        <a class="btn btn-primary" role="button" href="#/projects">Personal Projects</a>
+        <a class="btn btn-primary" role="button" href="#/blogs">Blog Sites</a>
+        <!-- <a class="btn btn-primary" role="button" href="#/resume">Resume</a> -->
+
       </div>
     </div>
     <hr>
-    <ul>
-      <li><a href="#/projects">Project List</a></li>
-      <li><a href="#/blogs">Blog List</a></li>
-    </ul>
+
     <div ng-view></div>
     <!-- main row container for project descriptions and Blog Links-->
   </div>
@@ -78,12 +79,11 @@
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="js/vendor/jquery-1.11.2.js"></script>
+  <script src="js/vendor/bootstrap.js"></script>
   <script src="app.js"></script>
   <script src="projectListView/projectListView.js"></script>
   <script src="blogListView/blogListView.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
 </body>
 
 </html>

@@ -4,11 +4,10 @@
 angular.module('projectGuac', [
   'ngRoute',
   'projectGuac.projectListView',
-  'projectGuac.blogListView',
-  'projectGuac.version'
+  'projectGuac.blogListView'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.
   otherwise({
-  	redirectTo: '/projectListView'});
+  	redirectTo: '/projects'});
 }]);
