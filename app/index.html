@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="projectGuac" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Scott Kamps-Duac</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://kamps-duac.github.io">Scott Kamps-Duac</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/pub/scott-kamps-duac/40/a29/8a7">Linked
+                <img src="img/linkedin.png" height="15" alt="In">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/kamps-duac"><img src="img/GitHub-Mark-64px.png" alt="" height="20px" />Github</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/kampsduac"> <img src="img/TwitterLogo_55acee.png" alt="Twitter " height="20px" />@kampsduac</a>
+            </li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <div class="container">
+        <h1><span><img src="http://www.gravatar.com/avatar/201af2cc5f5528097030ce03e5eda837" /></span> Scott's Stuff</h1>
+      </div>
+    </div>
+    <hr>
+    <ul>
+      <li><a href="#/projects">Project List</a></li>
+      <li><a href="#/blogs">Blog List</a></li>
+    </ul>
+    <div ng-view></div>
+    <!-- main row container for project descriptions and Blog Links-->
+  </div>
+  </div>
+  <footer>
+    <p class="text-center">
+      &copy; Scott Kamps-Duac |
+      <script type="text/javascript">
+      document.write(new Date().getFullYear());
+      </script>
+    </p>
+  </footer>
+  </div>
+  <!-- /container-fluid -->
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="projectListView/projectListView.js"></script>
+  <script src="blogListView/blogListView.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+
+</html>
