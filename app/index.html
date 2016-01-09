@@ -20,7 +20,7 @@
 
 <body>
   <div class="container-fluid">
-    <nav class="navbar navbar-inverse" role="navigation">
+    <!--     <nav class="navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,20 +46,43 @@
             </li>
           </ul>
         </div>
-        <!--/.navbar-collapse -->
+
       </div>
-    </nav>
+    </nav> -->
     <div class="jumbotron">
       <div class="container">
-        <h1><span><img src="http://www.gravatar.com/avatar/201af2cc5f5528097030ce03e5eda837" /></span> Scott's Stuff</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h2><span><img src="http://www.gravatar.com/avatar/201af2cc5f5528097030ce03e5eda837" /></span> Scott's Stuff</h2>
+            <p>Hi. Let's build something together!</p>
+          </div>
+          <div class="container">
+            <div id="social-well" class="well col-md-6">
+              <h2>Social Links</h2>
+              <ul id="social-list">
+                <li>
+                  <a target="_blank" href="https://www.linkedin.com/pub/scott-kamps-duac/40/a29/8a7">Linked
+                <img src="img/linkedin.png" height="15" alt="In">
+              </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://github.com/kamps-duac"><img src="img/GitHub-Mark-64px.png" alt="" height="20px" /> Github</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://twitter.com/kampsduac"> <img src="img/TwitterLogo_55acee.png" alt="Twitter " height="20px" />@kampsduac</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <a class="btn btn-primary" role="button" href="#/projects">Personal Projects</a>
         <a class="btn btn-primary" role="button" href="#/blogs">Blog Sites</a>
         <!-- <a class="btn btn-primary" role="button" href="#/resume">Resume</a> -->
-
       </div>
     </div>
     <hr>
-
     <div ng-view></div>
     <!-- main row container for project descriptions and Blog Links-->
   </div>
