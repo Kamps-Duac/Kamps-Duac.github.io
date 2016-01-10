@@ -18,8 +18,8 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
-  <div class="container-fluid">
+<body ng-controller="MainCtrl">
+  
     <!--     <nav class="navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -49,52 +49,14 @@
 
       </div>
     </nav> -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2><span><img src="http://www.gravatar.com/avatar/201af2cc5f5528097030ce03e5eda837" /></span> Scott's Stuff</h2>
-            <p>Hi. Let's build something together!</p>
-          </div>
-          <div class="container">
-            <div id="social-well" class="well col-md-6">
-              <h2>Social Links</h2>
-              <ul id="social-list">
-                <li>
-                  <a target="_blank" href="https://www.linkedin.com/pub/scott-kamps-duac/40/a29/8a7">Linked
-                <img src="img/linkedin.png" height="15" alt="In">
-              </a>
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/kamps-duac"><img src="img/GitHub-Mark-64px.png" alt="" height="20px" /> Github</a>
-                </li>
-                <li>
-                  <a target="_blank" href="https://twitter.com/kampsduac"> <img src="img/TwitterLogo_55acee.png" alt="Twitter " height="20px" />@kampsduac</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <a class="btn btn-primary" role="button" href="#/projects">Personal Projects</a>
-        <a class="btn btn-primary" role="button" href="#/blogs">Blog Sites</a>
-        <!-- <a class="btn btn-primary" role="button" href="#/resume">Resume</a> -->
-      </div>
-    </div>
+    <div ng-include="'partials/banner.html'"></div>
     <hr>
-    <div ng-view></div>
-    <!-- main row container for project descriptions and Blog Links-->
+    <div class="container-fluid">
+    <div ng-include="'partials/projectListView.html'"></div>
+    <div ng-include="'partials/blogListView.html'"></div>
   </div>
   </div>
-  <footer>
-    <p class="text-center">
-      &copy; Scott Kamps-Duac |
-      <script type="text/javascript">
-      document.write(new Date().getFullYear());
-      </script>
-    </p>
-  </footer>
+  <div ng-include="'partials/footer.html'"></div>
   </div>
   <!-- /container-fluid -->
   <!-- In production use:
@@ -105,8 +67,6 @@
   <script src="js/vendor/jquery-1.11.2.js"></script>
   <script src="js/vendor/bootstrap.js"></script>
   <script src="app.js"></script>
-  <script src="projectListView/projectListView.js"></script>
-  <script src="blogListView/blogListView.js"></script>
 </body>
 
 </html>
