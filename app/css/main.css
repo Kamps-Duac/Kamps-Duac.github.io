@@ -20,7 +20,12 @@
 }
 
 .jumbotron {
-    background: url('../img/darkbg.jpeg') center center;
+    background: #0A3A27;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0A3A27, #6EBF8C);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0A3A27, #0A3A27);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     text-align: center;
 }
