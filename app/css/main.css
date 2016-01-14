@@ -34,8 +34,10 @@
     margin-bottom: 0px;
 }
 
+/* ----------------- Mobile Navigations ----------------- */
+
 .mobileNavWrapper ul.nav li a {
-    border-bottom: 1px solid #E3B77B;
+    border-bottom: 1px solid #4F966D;
     width: 100%;
     float: left;
     display: block;
@@ -46,27 +48,24 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 20px;
-    background: #DCA459;
+    background: #545454;
 }
 
 .mobileNavWrapper ul.nav li a:hover {
     color: #FFF;
-    background: #E3B77B;
+    background: #4F966D;
 }
 
-
-/* ----------------- Mobile Navigations ----------------- */
-
 .mobileNavWrapper {
-    width: 250px;
+    width: 200px;
     height: 100%;
     min-height: 100%;
     position: fixed;
-    right: -250px;
+    right: -200px;
     top: 0;
     overflow-x: hidden;
     z-index: 16;
-    background: #DCA459;
+    background: #545454;
 }
 
 .mobileNavWrapper,
@@ -85,9 +84,9 @@
 .wrapper.showNav,
 .header.showNav,
 .footer.showNav {
-    -webkit-transform: translateX(-250px);
-    -ms-transform: translateX(-250px);
-    transform: translateX(-250px);
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
 }
 
 .wrapper {
@@ -126,7 +125,7 @@
 #menubuttonsvg:hover,
 #forwardsvg:hover,
 #backsvg:hover {
-    background: #DEA653;
+    background: #4F966D;
 }
 
 
@@ -166,6 +165,10 @@
 
 #menubuttonsvg {
     padding: 4px 0 5px 10px;
+}
+
+.jumbotron {
+    
 }
 
 /* Carousel.css
