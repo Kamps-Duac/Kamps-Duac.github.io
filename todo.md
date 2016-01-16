@@ -10,3 +10,7 @@
 
 ## Changes
 - [ ] Move Cat Clicker to a separate folder and see if we can have subsites of static pages
+
+## Sections
+- Favorite books
+- 
