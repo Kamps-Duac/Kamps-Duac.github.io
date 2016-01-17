@@ -1,7 +1,6 @@
 # To do
 - [ ] Add a couple of projects
 - [ ] Add blogs with descriptions
-- [ ] an about me page
 - [X] Add social media links
 
 ## Features
@@ -12,5 +11,5 @@
 - [ ] Move Cat Clicker to a separate folder and see if we can have subsites of static pages
 
 ## Sections
-- Favorite books
+- [ ] Favorite books
 - 
