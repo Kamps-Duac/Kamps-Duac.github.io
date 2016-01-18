@@ -89,12 +89,8 @@
     right: 0px;
 }
 
-.wrapper.showNav #menubuttonsvg {
+#menubuttonsvg.showNav {
   right: 200px;
-}
-
-.wrapper {
-    transition: all 0.3s ease 0s;
 }
 
 #menubuttonsvg,
@@ -122,12 +118,6 @@
 
 #backsvg {
     border-right: none;
-}
-
-#menubuttonsvg:hover,
-#forwardsvg:hover,
-#backsvg:hover {
-    background: #4F966D;
 }
 
 

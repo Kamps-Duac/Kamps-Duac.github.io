@@ -5,3 +5,9 @@ $("#mobileMenuButton").on("click", function(e) {
     e.stopPropagation();
     moveOnMenuOpen.toggleClass("showNav");
 });
+
+
+// projectCarousel.carousel();
+// projectCarousel.carousel({
+// 	swipe: 30
+// });

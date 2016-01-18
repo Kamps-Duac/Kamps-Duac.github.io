@@ -2,6 +2,7 @@
 - [ ] Add a couple of projects
 - [ ] Add blogs with descriptions
 - [X] Add social media links
+- [ ] Complete Sections
 
 ## Features
 - [ ] Add simple JS framework so I can add projects and blog sites using a JSON file
