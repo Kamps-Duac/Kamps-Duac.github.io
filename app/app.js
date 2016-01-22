@@ -15,38 +15,13 @@
 
 var projectGuacApp = angular.module('projectGuac', []);
 
-projectGuacApp.controller('MainCtrl', ['$scope', '$location', '$anchorScroll',
-    function($scope, $location, $anchorScroll) {
-        $scope.pageLocation = "Home";
-        $scope.gotoAnchor = function(ref) {
-            if ($location.hash() !== ref) {
-                $location.hash(ref);
-            }
-            $anchorScroll();
-        }
+projectGuacApp.config(function($locationProvider) {
 
-        $scope.currentYear = new Date().getFullYear();
-    }
-]);
+    $locationProvider.html5Mode(true);
 
-projectGuacApp.controller('ProjectCtrl', ['$scope',
-    function($scope) {
+});
 
-        $("#carousel-example-generic").carousel();
-    }
-]);
 
-projectGuacApp.controller('NavMenuCtrl', ['$scope',
-    function($scope) {
-
-        var moveOnMenuOpen = $(".mobileNavWrapper, .wrapper, .header, .footer, #menubuttonsvg")
-        $("#mobileMenuButton").on("click", function(e) {
-            e.stopPropagation();
-            moveOnMenuOpen.toggleClass("showNav");
-        });
-
-    }
-]);
 
 // projectGuacApp.controller('ProjectListCtrl', ['$scope',
 //     function($scope) {
