@@ -49,8 +49,9 @@
       </div>
     </div>
 
-    <div class="container">
-    <div ng-view=""></div>
+    <div class="container-fluid">
+    <div ng-view></div>
+    <div ng-include="'views/projects.html'"></div>
     </div>
 
     <div class="footer">
@@ -87,6 +88,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/project.js"></script>
         <!-- endbuild -->
 </body>
 </html>
