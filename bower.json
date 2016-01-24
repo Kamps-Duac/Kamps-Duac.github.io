@@ -2,17 +2,8 @@
   "name": "kamps-duac-github-io",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
+    "modernizr": "~2.8.1",
+    "bootswatch-dist": "paper"
   },
   "devDependencies": {
     "chai": "~3.4.2",
