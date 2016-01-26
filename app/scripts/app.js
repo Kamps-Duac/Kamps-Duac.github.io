@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'angular-md5'
   ])
   .config(function ($routeProvider) {
     $routeProvider

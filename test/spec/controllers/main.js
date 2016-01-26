@@ -17,7 +17,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(MainCtrl.awesomeThings.length).toBe(3);
+  it('should have an md5 hash of the email address in the scope.', function () {
+    expect(scope.gravatar).toBeTruthy();
   });
 });

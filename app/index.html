@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div ng-controller="MainCtrl" class="container-fluid">
     <div ng-view></div>
     <div ng-include="'views/projects.html'"></div>
     </div>
@@ -81,6 +81,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/bootswatch-dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-md5/angular-md5.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
