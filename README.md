@@ -1,12 +1,30 @@
-# kampsduac
+# Personal Page for Scott Kamps-Duac
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+## On Deck
+ - Store Project list in JSON file
+ - Get images
+ - Make images fancier with some kind of frame/overlay
+ - Create view for Blogs
 
-## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+## ToDO
 
-## Testing
+[ ] Make Responseive Menu
+	[ ] Swipe to open/close
+	[ ] Add menu items
+	[ ] use ng scope to track what part of page scroller is open
 
-Running `grunt test` will run the unit tests with karma.
+## Sections
+
+[ ] Projects
+ - Cat Clicker
+ - Mapacious
+ - Kording
+ - LOL Dashboard
+ - Open Source
+[ ] Blogs
+[ ] Favorite Books
+[ ] Favorite Courses
+ - Link to course desc
+ - Link to Notes
+
