@@ -1,8 +1,24 @@
 <div ng-controller="ProjectCtrl">
-	
-	<p>This is where the projects will go.</p>
-	<ul>
-		<li ng-repeat="project in projects">{{project}}</li>
-	</ul>
-
+  <div class="row marketing">
+    <h4>Projects</h4>
+    <ul>
+      <li>Cat Clicker</li>
+      <li>Mapacious</li>
+      <li>Kording</li>
+    </ul>
+    <div class="thumbnail" ng-repeat="project in projects">
+      <img src="{{project.img_src}}" alt="" class="img-responsive" max-height="300px">
+      <div class="caption">
+        <h3>{{project.name}}</h3>
+        <p>{{project.desc}}</p>
+        <p>
+          <a href="{{project.source}}" class="btn btn-primary" role="button">Code</a>
+          <a href="{{project.demo}}" class="btn btn-default" role="button">Demo</a>
+        </p>
+      </div>
+    </div>
+    <!-- <ul>
+      <li ng-repeat="project in projects">{{project}}</li>
+    </ul> -->
+  </div>
 </div>

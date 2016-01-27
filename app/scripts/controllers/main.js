@@ -1,8 +1,8 @@
 'use strict';
 
-var email = "kamps.duac@gmail.com";
+var email = 'kamps.duac@gmail.com';
 
-var GRAVATAR_URL = "http://www.gravatar.com/avatar/";
+var GRAVATAR_URL = 'http://www.gravatar.com/avatar/';
 
 /**
  * @ngdoc function
