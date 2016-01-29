@@ -12,7 +12,8 @@
 [ ] Make Responseive Menu
 	[ ] Swipe to open/close
 	[ ] Add menu items
-	[ ] use ng scope to track what part of page scroller is open
+	[ ] use ng scope to track what part of page scroller is openr
+[ ] Use Rss to read latest posts and display first couple of lines
 
 ## Sections
 
