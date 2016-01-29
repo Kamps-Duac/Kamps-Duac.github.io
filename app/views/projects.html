@@ -1,13 +1,8 @@
 <div ng-controller="ProjectCtrl">
-  <div class="row marketing">
-    <h4>Projects</h4>
-    <ul>
-      <li>Cat Clicker</li>
-      <li>Mapacious</li>
-      <li>Kording</li>
-    </ul>
+  <div class="row marketing text-center">
+    <h2 id="projects">Projects</h2>
     <div class="thumbnail" ng-repeat="project in projects">
-      <img src="{{project.img_src}}" alt="" class="img-responsive" max-height="300px">
+      <img src="{{project.img_src}}" alt="" class="img-responsive img-project">
       <div class="caption">
         <h3>{{project.name}}</h3>
         <p>{{project.desc}}</p>

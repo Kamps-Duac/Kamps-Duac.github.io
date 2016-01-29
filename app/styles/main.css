@@ -81,3 +81,9 @@ body {
     border-bottom: 0;
   }
 }
+
+.img-project {
+  max-height: 15em;
+  border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+}

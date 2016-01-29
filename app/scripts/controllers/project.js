@@ -16,8 +16,9 @@ angular.module('kampsduacApp')
             'source': 'https://github.com/Kamps-Duac/Kamps-Duac.github.io/tree/cat_click_vanilla',
             'demo': 'https://github.com/Kamps-Duac/Kamps-Duac.github.io/tree/cat_click_vanilla'
         }, {
-            'name': 'Cat Clicker',
-            'desc': "Vanilla Javascript appliction with that counts cat clicks. Built throughout Udacity's Javascript design patterns course.",
+            'name': 'Mapacious',
+            'desc': "Vanilla Javascript appliction with that counts cat clicks. sBuilt throughout Udacity's Javascript design patterns course.",
+            'img_src': 'images/mapacious.jpg',
             'source': 'https://github.com/Kamps-Duac/Kamps-Duac.github.io/tree/cat_click_vanilla',
             'demo': 'https://github.com/Kamps-Duac/Kamps-Duac.github.io/tree/cat_click_vanilla'
         }];
