@@ -14,6 +14,7 @@ angular
         'ngResource',
         'ngRoute',
         'ngTouch',
+        'angular.filter',
         'angular-md5'
     ])
     .config(function($routeProvider, $locationProvider) {

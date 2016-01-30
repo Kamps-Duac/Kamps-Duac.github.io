@@ -93,15 +93,10 @@ body {
 }
 
 .thumbnail {
-  padding: 1em;
   border: none;
 }
 
-a {
-  color: inherit;
-}
-
-a:hover {
+a, a:link, a:active, a:hover, a:visited {
   color: inherit;
 }
 
