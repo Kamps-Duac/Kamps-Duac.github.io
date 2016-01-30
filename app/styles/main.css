@@ -88,6 +88,20 @@ body {
   border-top-left-radius: 150px;
 }
 
+.img-book {
+  max-height: 10em;
+}
+
 .thumbnail {
   padding: 1em;
+  border: none;
 }
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+

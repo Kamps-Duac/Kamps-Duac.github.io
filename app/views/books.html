@@ -1,0 +1,12 @@
+<div ng-controller="BookCtrl" class="row marketing">
+  <h2 id="books">Books</h2>
+  <div class="text-center">
+    <div class="thumbnail col-sm-offset-1 col-sm-4" ng-repeat="book in books">
+      <img src="{{book.img_src}}" alt="" class="img-responsive img-book">
+      <div class="caption text-center">
+        <h3>{{book.title}}</h3>
+        <p>{{book.desc}}</p>
+      </div>
+    </div>
+  </div>
+</div>
