@@ -7,7 +7,7 @@
     "angular-resource": "^1.4.0",
     "angular-route": "^1.4.0",
     "angular-touch": "^1.4.0",
-    "bootswatch-dist": "paper",
+    "bootswatch-dist": "3.3.6-paper",
     "angular-md5": "~0.1.10",
     "angular-filter": "~0.5.8"
   },
