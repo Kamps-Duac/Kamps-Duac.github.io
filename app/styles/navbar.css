@@ -1,0 +1,15 @@
+.icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #cccccc;
+    border-radius: 1px;
+    margin-top: 4px;
+}
+
+.nav-menu-button {
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+}
