@@ -14,6 +14,7 @@ angular
         'ngResource',
         'ngRoute',
         'ngTouch',
+        'ngSanitize',
         'angular.filter',
         'angular-md5'
     ])

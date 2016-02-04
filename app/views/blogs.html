@@ -2,8 +2,9 @@
   <h2 id="blogs" class="col-sm-offset-1">Blogs</h2>
   <div ng-repeat="blog in blogs" class="col-sm-offset-1 col-sm-11">
     <h3><a href="{{blog.url}}">{{blog.name}}</a></h3>
-    <p class="caption">{{blog.caption}}</p>
-    <h6>{{blog.post[0].title}}</h6>
-    <p>{{blog.post[0].content | limitTo: 200 }}{{blog.post[0].content > 20 ? '...' : ''}}</p>
+    <div ng-repeat="post in blog.posts">
+      <h6 ng-bind-html="post.title"></h6>
+      <div ng-bind-html="post.excerpt" class="blog-excerpt"></div>
+    </div>
   </div>
 </div>

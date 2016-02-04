@@ -23,7 +23,7 @@ angular.module('kampsduacApp')
                 var url = 'https://public-api.wordpress.com/rest/v1.1/sites/' + blogName +
                     '.wordpress.com/posts/?number=' + BLOG_POST_COUNT;
 
-                return this.async(url).then(function(response) {
+                return $http.get(url).then(function(response) {
                     console.log(response);
                     posts = response.data.posts;
 
