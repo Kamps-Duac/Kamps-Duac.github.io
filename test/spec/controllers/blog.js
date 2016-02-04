@@ -12,12 +12,14 @@ describe('Controller: BlogCtrl', function () {
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     BlogCtrl = $controller('BlogCtrl', {
-      $scope: scope
+      $scope: scope,
       // place here mocked dependencies
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.blogs).toBeTruthy();
+  // it('should attatch posts to blogs', function () {
+  //   angular.forEach(scope.blogs, function(blog) {
+  //     expect(blog.posts).toBeTruthy();
+  //   });
   });
 });
