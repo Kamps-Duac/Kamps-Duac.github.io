@@ -1,5 +1,8 @@
 # Personal Page for Scott Kamps-Duac
 
+## Working Now
+[ ] Adding WordpressService to parse public API and show most recent posts.
+
 ## On Deck
  - Store Project list in JSON file
  - Get images

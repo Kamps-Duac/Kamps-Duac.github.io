@@ -15,8 +15,8 @@ describe('Service: WordpressService', function () {
     expect(!!WordpressService).toBe(true);
   });
 
-  it('should return the number of words asked for in a post', function () {
-    expect((WordpressService(1, 50)).length).toBe(50);
+  it('should get a response when calling async', function () {
+    expect((WordpressService.async(kodingkamper))).toBeTrue();
   });
 
 });
