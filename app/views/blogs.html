@@ -3,7 +3,7 @@
   <div ng-repeat="blog in blogs" class="col-sm-offset-1 col-sm-11">
     <h3><a href="{{blog.url}}">{{blog.name}}</a></h3>
     <div ng-repeat="post in blog.posts">
-      <h4><a target="_blank" href="{{post.short_URL}}">{{post.title}}</a></h4>
+      <h6 ng-bind-html="post.title"></h6>
       <div ng-bind-html="post.excerpt" class="blog-excerpt"></div>
     </div>
   </div>
