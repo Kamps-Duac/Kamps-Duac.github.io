@@ -21,5 +21,5 @@ describe('Controller: BlogCtrl', function () {
   //   angular.forEach(scope.blogs, function(blog) {
   //     expect(blog.posts).toBeTruthy();
   //   });
-  });
+  //});
 });
