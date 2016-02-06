@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron jumbotron-main">
   <h1>Welcome, Friend!</h1>
   <div class="lead">
     <img src="{{gravatar}}" alt="I'm Yeoman">
@@ -8,6 +8,8 @@
     </p>
   </div>
 </div>
-<div ng-include="'views/projects.html'"></div>
-<div ng-include="'views/blogs.html'"></div>
-<div ng-include="'views/books.html'"></div>
+<div class="container">
+  <div ng-include="'views/projects.html'"></div>
+  <div ng-include="'views/blogs.html'"></div>
+  <div ng-include="'views/books.html'"></div>
+</div>

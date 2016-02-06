@@ -4,7 +4,7 @@
     <h3 class="blog-name text-center">{{blog.name}}</h3>
     <div class="blog-caption lead text-center">{{blog.caption}}<p><a target="_blank" ng-href="{{blog.url}}" class="btn btn-link">check it out</a><p></div>
 
-    <div ng-repeat="post in blog.posts" class="well well-sm">
+    <div ng-repeat="post in blog.posts" class="">
       <h4>{{post.title}}</h4>
       <div ng-bind-html="post.excerpt" class="blog-excerpt"></div>
       <a target="_blank" ng-href="{{post.URL}}" class="btn btn-link">read this post</a>
