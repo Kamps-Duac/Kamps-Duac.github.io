@@ -14,7 +14,8 @@ angular.module('kampsduacApp')
             'author': 'Zed Shaw',
             'desc': 'A great hands-on introduction to writing code and interacting with the computer.',
             'link': 'http://learncodethehardway.org/',
-            'img_src': 'images/lpthwbook.jpg'
+            'img_src': 'images/lpthwbook.jpg',
+            'notes': 'https://github.com/Kamps-Duac/Zed-Shaw'
         }, {
         	'title': 'Effective Java',
         	'author': 'Joshua Bloch',

@@ -1,14 +1,14 @@
 <div ng-controller="ProjectCtrl" class="row marketing">
-  <h2 id="projects" class="col-sm-offset-1">Projects</h2>
-  <div class="text-center col-sm-offset-1" ng-repeat="project in projects">
+  <h2 id="projects" class="jumbotron">Projects</h2>
+  <div class="text-center" ng-repeat="project in projects">
     <div ng-if="$index % 2 == 0" class="clearfix hidden-xs-inline-block"></div>
-    <div class="thumbnail col-sm-5">
-      <img src="{{project.img_src}}" alt="" class="img-responsive img-project">
+    <div class="thumbnail col-sm-6">
+      <img ng-src="{{project.img_src}}" alt="" class="img-responsive img-project">
       <div class="caption text-center">
         <h3>{{project.name}}</h3>
-        <p>{{project.desc}}</p>
+        <p class="lead">{{project.desc}}</p>
         <p>
-          <a target="_blank" href="{{project.source}}" class="btn btn-primary" role="button">Code</a>
+          <a target="_blank" href="{{project.source}}" class="btn btn-default" role="button">Code</a>
           <a target="_blank" href="{{project.demo}}" class="btn btn-default" role="button">Demo</a>
         </p>
       </div>

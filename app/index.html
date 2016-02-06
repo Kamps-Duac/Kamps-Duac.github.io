@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="kampsduacApp">
+  <body ng-app="kampsduacApp" ng-controller="MainCtrl">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -41,17 +41,17 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a ng-href="/">Home</a></li>
-              <li><a ng-href="#projects">Projects</a></li>
-              <li><a ng-href="#blogs">Blogs</a></li>
-              <li><a ng-href="#books">Books</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#blogs">Blogs</a></li>
+              <li><a href="#books">Books</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div ng-controller="MainCtrl" class="container-fluid">
     <div ng-view></div>
+    <div class="container-fluid">
     </div>
 
     <div class="footer">
@@ -95,7 +95,6 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/project.js"></script>
         <script src="scripts/controllers/blog.js"></script>
         <script src="scripts/controllers/book.js"></script>

@@ -1,10 +1,13 @@
 <div ng-controller="BlogCtrl" class="row marketing blogs">
-  <h2 class="col-sm-offset-1">Blogs</h2>
-  <div ng-repeat="blog in blogs" class="col-sm-offset-1 col-sm-11">
-    <h3 class="text-center"><a target="_blank" href="{{blog.url}}">{{blog.name}}</a></h3>
-    <div ng-repeat="post in blog.posts">
-      <h4 ng-bind-html="post.title"></h4>
+  <h2 id="blogs" class="jumbotron">Blogs</h2>
+  <div ng-repeat="blog in blogs" class="">
+    <h3 class="blog-name text-center">{{blog.name}}</h3>
+    <div class="blog-caption lead text-center">{{blog.caption}}<p><a target="_blank" ng-href="{{blog.url}}" class="btn btn-link">check it out</a><p></div>
+
+    <div ng-repeat="post in blog.posts" class="well well-sm">
+      <h4>{{post.title}}</h4>
       <div ng-bind-html="post.excerpt" class="blog-excerpt"></div>
+      <a target="_blank" ng-href="{{post.URL}}" class="btn btn-link">read this post</a>
     </div>
   </div>
 </div>
