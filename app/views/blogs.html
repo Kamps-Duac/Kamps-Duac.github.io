@@ -1,6 +1,6 @@
-<div ng-controller="BlogCtrl" class="row marketing blogs">
+<div ng-controller="BlogCtrl" class="">
   <h2 id="blogs" class="jumbotron">Blogs</h2>
-  <div ng-repeat="blog in blogs" class="">
+  <div ng-repeat="blog in blogs" class="container blogs">
     <h3 class="blog-name text-center">{{blog.name}}</h3>
     <div class="blog-caption lead text-center">{{blog.caption}}<p><a target="_blank" ng-href="{{blog.url}}" class="btn btn-link">check it out</a><p></div>
 
