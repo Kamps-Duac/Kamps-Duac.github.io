@@ -13,6 +13,11 @@ var GRAVATAR_URL = 'http://www.gravatar.com/avatar/';
  */
 angular.module('kampsduacApp')
     .controller('MainCtrl', ['$scope', 'md5', function($scope, md5) {
+
+        $scope.sideNav = {
+            active: false
+        };
+
         $scope.gravatar = GRAVATAR_URL + md5.createHash(email);
 
         $scope.socials = [{
