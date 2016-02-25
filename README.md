@@ -2,19 +2,20 @@
 
 ## Working Now
 [X] Adding WordpressService to parse public API and show most recent posts.
+[ ] Add hobbies
+[ ] Add catagory spy
 
 ## On Deck
  - Store Project list in JSON file
  - Get images
  - Make images fancier with some kind of frame/overlay
- - Create view for Blogs
 
 
 ## ToDO
 
 [ ] Make Responseive Menu
 	[ ] Swipe to open/close
-	[ ] Add menu items
+	[ ] Ad d menu items
 	[ ] use ng scope to track what part of page scroller is openr
 [ ] Use Rss to read latest posts and display first couple of lines
 
