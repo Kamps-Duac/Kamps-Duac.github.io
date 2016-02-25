@@ -1,17 +1,6 @@
-<!doctype html> <html> <head> <meta charset="utf-8"> <title>Scott's Site</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.666bf20b.css"> <link rel="stylesheet" href="styles/main.6866208b.css"> <link rel="stylesheet" href="styles/navbar.css"> </head> <body ng-app="kampsduacApp" ng-controller="MainCtrl"> <!--[if lte IE 8]>
+<!doctype html> <html> <head> <meta charset="utf-8"> <title>Scott's Site</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.666bf20b.css"> <link rel="stylesheet" href="styles/main.c462b717.css"> <link rel="stylesheet" href="styles/navbar.css"> </head> <body ng-app="kampsduacApp" ng-controller="MainCtrl"> <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Add your site or application content here --> <!-- <div class="header"> --> <!-- container-fluid to separate sidenavbar from main container --> <div class="container-fluid"> <div class="row"> <div id="sidebarContainer" ng-class="[{'hidden' : sideNav.active==false}, {'col-xs-3 col-sm-2 col-lg-2' : sideNav.active==true}]"> <div class="navbar navbar-default navbar-fixed-top" id="sidebar-wrapper" role="navigation"> <!--           <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="/">kampsduac</a>
-          </div>
- --> <!-- <div class="collapse navbar-collapse" id="js-navbar-collapse"> --> <ul class="nav sidebar-nav"> <li class="active"><a href="/">Home</a></li> <li><a href="#projects">Projects</a></li> <li><a href="#blogs">Blogs</a></li> <li><a href="#books">Books</a></li> </ul> <!--           </div> --> </div> <!-- </div> --> </div> <!-- <input type="checkbox" ng-model="sideNav.active"> --> <label class="menu-btn" ng-click="sideNav.active = !sideNav.active"> <div class="menu-btn-hamburger" ng-show="!sideNav.active"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </div> <div class="menu-btn-close" ng-show="sideNav.active"> <span class="menu-x"></span> </div> </label> <div ng-view ng-class="['main-view', {'col-xs-offset-3 col-sm-offset-2' : sideNav.active}]"></div> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>! function(A, n, g, u, l, a, r) {
+    <![endif]--> <!-- Add your site or application content here --> <!-- <div class="header"> --> <!-- container-fluid to separate sidenavbar from main container --> <div class="container-fluid"> <div class="row"> <div ng-view></div> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>! function(A, n, g, u, l, a, r) {
     A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
         (A[l].q = A[l].q || []).push(arguments)
       }, A[l].l = +new Date, a = n.createElement(g),
@@ -19,4 +8,4 @@
   }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');</script> <script src="scripts/vendor.85d38fcc.js"></script> <script src="scripts/scripts.ce8b70a8.js"></script> </body> </html>
+  ga('send', 'pageview');</script> <script src="scripts/vendor.85d38fcc.js"></script> <script src="scripts/scripts.8b67c8fc.js"></script> </body> </html>
