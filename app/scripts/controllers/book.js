@@ -27,6 +27,7 @@ angular.module('kampsduacApp')
         	'author': 'Andy Hunt and Dave Thomas',
         	'desc': 'All-purpose software Engineering. Leads to a better quality of life.',
         	'link': 'http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X',
-        	'img_src': 'images/pragprog.jpg'
+        	'img_src': 'images/pragprog.jpg',
+            'notes': 'https://freeasinguac.wordpress.com/2016/02/15/the-pragmatic-programmer/'
         }];
     });

@@ -8,8 +8,8 @@
         <h3>{{project.name}}</h3>
         <p class="lead">{{project.desc}}</p>
         <p>
-          <a target="_blank" href="{{project.source}}" class="btn btn-default" role="button">Code</a>
-          <a target="_blank" href="{{project.demo}}" class="btn btn-default" role="button">Demo</a>
+          <a target="_blank" ng-href="{{project.source}}" class="btn btn-default" role="button">Code</a>
+          <a ng-if="project.demo" target="_blank" ng-href="{{project.demo}}" class="btn btn-default" role="button">Demo</a>
         </p>
       </div>
     </div>

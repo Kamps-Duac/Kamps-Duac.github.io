@@ -27,43 +27,7 @@
   <!-- container-fluid to separate sidenavbar from main container -->
   <div class="container-fluid">
     <div class="row">
-      <div id="sidebarContainer" ng-class="[{'hidden' : sideNav.active==false}, {'col-xs-3 col-sm-2 col-lg-2' : sideNav.active==true}]">
-        <div class="navbar navbar-default navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-          <!--           <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="/">kampsduac</a>
-          </div>
- -->
-          <!-- <div class="collapse navbar-collapse" id="js-navbar-collapse"> -->
-          <ul class="nav sidebar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blogs">Blogs</a></li>
-            <li><a href="#books">Books</a></li>
-          </ul>
-          <!--           </div> -->
-        </div>
-        <!-- </div> -->
-      </div>
-      <!-- <input type="checkbox" ng-model="sideNav.active"> -->
-      <label class="menu-btn" ng-click="sideNav.active = !sideNav.active">
-        <div class="menu-btn-hamburger" ng-show="!sideNav.active">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </div>
-        <div class="menu-btn-close" ng-show="sideNav.active">
-          <span class="menu-x"></span>
-        </div>
-      </label>
-      <div ng-view ng-class="['main-view', {'col-xs-offset-3 col-sm-offset-2' : sideNav.active}]"></div>
+      <div ng-view></div>
     </div>
   </div>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

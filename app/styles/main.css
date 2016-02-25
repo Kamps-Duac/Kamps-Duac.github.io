@@ -150,3 +150,7 @@ a:visited {
 .blog-caption {
 
 }
+
+.gravatar {
+    border-radius: 25px;
+}
