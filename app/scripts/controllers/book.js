@@ -29,5 +29,11 @@ angular.module('kampsduacApp')
         	'link': 'http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X',
         	'img_src': 'images/pragprog.jpg',
             'notes': 'https://freeasinguac.wordpress.com/2016/02/15/the-pragmatic-programmer/'
+        }, {
+            'title': 'Learning JavaScript Design Patterns',
+            'author': 'Addy Osmani',
+            'desc': 'Design Patterns for today\'s web',
+            'link': 'https://addyosmani.com/resources/essentialjsdesignpatterns/book/',
+            'img_src': 'https://addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg'
         }];
     });
