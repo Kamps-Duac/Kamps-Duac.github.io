@@ -20,6 +20,8 @@ angular.module('kampsduacApp')
 
         $scope.gravatar = GRAVATAR_URL + md5.createHash(email);
 
+        $scope.intro = 'My name is Scott. I love to solve problems by learning new things.';
+
         $scope.socials = [{
             'name': 'Linkedin',
             'logo_src': 'images/Logo-2C-121px-TM.png',
